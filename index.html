@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon1.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+<body>    
+    <header>
+        <div class="container-fluid">
+            <div>
+                <div class="fixed-top">
+                    <div class="collapse" id="navbarToggleExternalContent">
+                        <div class="bg-dark p-4">
+                            <a href="#"><h6 class="text-white h6">Home</h6></a>
+                            <a href="#try-free"><h6 class="text-white h6">Try for free</h6></a>
+                            <a href="login.html"><h6 class="text-white h6">Login</h6></a>
+                            <a href="signup.hmtl"><h6 class="text-white h6">Sign-Up</h6></a>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-dark bg-dark">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    </nav>
+                </div>
+            </div>
+            <div class="container intro">
+                <div class="row">
+                    <div class="col">
+                        <div class="main-hero-text">
+                            <h1>Stockify</h1>
+                        </div>
+                        <div class="sub-hero-text">
+                            <h4>Stock Market made Easy.</h4>
+                        </div>
+                    </div>
+                    <div class="col">        
+                        <div class="image_stock">
+                            <img src="img1.svg" alt="image1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                body {
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                .fixed-top {
+                    position: absolute;
+                }
+                .intro {
+                    outline: black;
+                    color: #1A1B25;
+                    text-shadow: 4px 4px 8px #1A1B25;
+                }
+                h1 {
+                    font-size: 6.5vw;
+                    font-variant: small-caps;
+                    letter-spacing: 2px;
+                    /* text-decoration: underline; */
+                }
+                h4 {
+                    padding-top: 10px;
+                    font-weight: bold;
+                    text-decoration: underline;
+                    font-size: 25px;
+                }
+            </style>
+        </div>
+    </header>
+
+
+    <!--  -->
+    <!--  -->
+    <!--  -->
+
+
+    <section class="try-for-free" id="try-free">
+        <div class="free-form-center">
+        <div class="container try-free-form">
+            <div class="row">
+                <div class="col">
+                    <label for="company-name"><span class="label-company">Enter a Comapny's name:</span></label>
+                        <input type="text" placeholder="Name of the company" id="company-name">
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col">
+                    <label for="start-date">Enter Start Date: </label>
+                    <input type="date" id="start-date">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <label for="end-date">Enter End Date: </label>
+                    <input type="date" id="end-date">
+                    </div>
+                </div>
+                <div class="row button-form">
+                    <input class="submit-button" type="submit" value="Calculate">
+                </div>
+            </div>
+        </div>
+        <style>
+            .free-form-center {
+                position: absolute;
+                height: 100vh;
+                width: 100%;
+                margin: auto;
+            }
+            /* .try-free-form {
+                position: absolute;
+                left: 30vw;
+                bottom: 30vw; 
+                left: 50%;
+                top: 50%;
+                transform: translate(-35%,350%);
+                width: auto;
+            } */
+            ::placeholder{
+                color:rgba(255,255,255,0.8);
+                text-decoration: underline;
+            }
+            #company-name, #start-date, #end-date{
+                padding-top: 2%;
+                border-color: transparent;
+                background-color: transparent;
+                color: #1A1B25;
+                cursor:pointer;
+            }
+            #company-name:focus, #start-date:focus, #end-date:focus {
+                outline: 0;
+            }
+            .label-company:hover{
+                /* cursor: crosshair; */
+                border-bottom: #1A1B25;
+                transition: 1s;
+            }
+        </style>
+    </section>
+
+    <footer>
+        <div class="footer-text">Designed with ❤️ by <span>Team Stockify</span></div>
+    </footer>
+</body>
+</html>
