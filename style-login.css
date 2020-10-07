@@ -3,7 +3,8 @@ html {
     margin: 0px;
 }
 body{
-    background-image: url('https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg');
+    /* background-image: url('https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg'); */
+    background-image: url('bg.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -31,9 +32,11 @@ img {
     width: 100%;
 }
 label {
-    color: orange;
+    color: #5B1285;
     margin-bottom: 0px;
     transition: all 0.9s ease;
+    font-family: 'Comfortaa', cursive;
+    font-size: 150%;
 }
 /* label:hover{ 
     text-shadow: 1px 1px 1px gray;
@@ -66,6 +69,8 @@ input[type=email]:focus, input[type=password]:focus {
 }
 #emailHelp {
     color: darkkhaki;
+    font-family: monospace;
+    font-size: 100%;
 }
 
 .btn08 {
@@ -88,11 +93,12 @@ input[type=email]:focus, input[type=password]:focus {
     transition: all .9s ease;
     background-color: transparent;
     border: 1px solid cornsilk;
-    text-shadow: 0 2px 5px rgba(255, 255, 0, 0.671);
+    text-shadow: 0 2px 5px #EE0159;
 }
 
 .btn08:hover {
-    color: black;    
+    color: black;
+    text-shadow: 0 2px 5px #591385;   
 }
 button:focus {
     border: 1px solid black !important;
@@ -101,8 +107,14 @@ button:focus {
 }
 
 #forgot-password, #sign-up-here {
-    color: #03213B;
+    color: #EE0159;
     transition: all 0.9s ease;
+    font-family: monospace;
+    /* font-size: 150%; */
+}
+#forgot-password {
+    font-family: monospace;
+    font-size: 150%;
 }
 /* #forgot-password:hover{
     color: darkolivegreen;
@@ -116,9 +128,12 @@ button:focus {
     position: relative;
     /* top: 50%; */
     transform: translate(0%,50%);
-    box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.384);
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.384);
     /* box-shadow: -10px -10px 10px red; */
 }
 .sign-up-link {
     padding-top: 2%;
+    font-family: monospace;
+    font-size: 150%;
 }
+
