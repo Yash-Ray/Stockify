@@ -57,7 +57,7 @@ input[type=email], input[type=password] {
     outline: 0;
     margin-bottom: 20px;
     padding-left: 0px;
-    color: #ecf0f5;
+    color: black;
     background: transparent;
 }
 input[type=email] {
@@ -93,12 +93,12 @@ input[type=email]:focus, input[type=password]:focus {
     transition: all .9s ease;
     background-color: transparent;
     border: 1px solid orangered;
-    text-shadow: 0 2px 5px #EE0159;
+    text-shadow: 0 2px 5px orangered;
 }
 
 .btn08:hover {
     color: yellow;
-    text-shadow: 0 2px 5px black;   
+    text-shadow: 2px -2px 5px black;   
 }
 button:focus {
     border: 1px solid black !important;
@@ -137,4 +137,21 @@ button:focus {
     font-family: monospace;
     font-size: 150%;
 }
+.form-control {
+    color: black;
+}
+section {
+    height: 95vh;
+}
 
+footer {
+    height: 5vh;
+    background-color: #1A1B25;
+    text-align: center;
+
+}
+.footer-text {
+    color: #F0F2A6;
+    margin: auto;
+    padding-top: 5px;
+}
