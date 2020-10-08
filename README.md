@@ -8,4 +8,5 @@ DBMS Project
 
 [OTP Provider website](https://www.miniorange.com/otp-verification-serivce#validateotpjs)
 
-## Bugs Present in Sign-Up.html. Will rectify ASAP
+## Bugs Present in Sign-Up.html
+## Will rectify ASAP
