@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon1.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrapstyle.css">
+    <link rel="stylesheet" href="sign-up-style.css">
+</head>
+
+    <body>
+        <section>
+            <div class="container">
+                <div class="innerbox" style="margin: 0px auto;">
+                    <form>
+                        <h4 style="font-size: 50px;">Sign Up</h4>
+                        <h6 style="font-size: 20px;">Please fill in the form below to create an account.</h6>
+                        <div class="form-row">
+                            <div class="col">
+                                <label for="formGroupExampleInput">Name</label>
+                                <input type="text" id="formGroupExampleInput" class="form-control" placeholder="First name" required>
+                            </div>
+                            <div class="col">
+                                <label for="formGroupExampleInput" style="color: transparent;">.</label>
+                                <input type="text" id="formGroupExampleInput" class="form-control" placeholder="Last name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="emaillabel" style="padding-top: 10px;">Email</label>
+                            <input type="email" class="form-control" aria-describedby="emailHelp" id="emaillabel" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emaillabel" style="margin-top: 0px;">Password</label>
+                            <input type="password" class="form-control" id="Password1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="emaillabel" style="margin-top: 0px;">Confirm Password</label>
+                            <input type="password" class="form-control" id="Password2" required>
+                            <small class="msgout-class" id="msgout"></small>
+                        </div>
+                        <div class="T&C-agree">
+                            <input type="checkbox" id="chk-box">
+                            <label for="tandc" style="margin-top: 0px;">I agree to the terms and conditions.</label>
+                        </div>
+                        <div class="buttons">
+                        <!-- <div class="cancel-btn"> -->
+                            <input type="reset" class="btn cancel-btnbtn-primary btn08 projectButton" value="Reset" style="margin: 5px; box-shadow: none;">
+                            <!-- <button type="reset" class="btn btn-primary btn08 projectButton">Cancel</button> -->
+                        <!-- </div> -->
+                        <!-- <div class="signin-btn"> -->
+                            <input type="button" id="signup-btn" class="btn signin-btnbtn-primary btn08 projectButton" onclick="validatornew()" value="SignUp" style="margin: 5px; box-shadow: none;" disabled>
+                            <!-- <button type="submit" class="btn btn-primary btn08 projectButton">SignUp</button> -->
+                        <!-- </div> -->
+                        </div>
+                        <div class="back-to-login" style="text-align: center; margin-top: 5px;">Already have an account? <a href="./Login.html">Login</a> here.</div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container {padding: 0px;}
+        .ray{border: none; background-color: rgba(255, 255, 255, 0.425);}
+        .ray1 {padding: 0px;}
+        </style>
+        <footer>
+            <div class="footer-text" id="ftr-text">Designed with ❤️ by <span>Team Stockify</span></div>
+        </footer>
+        <script>
+            // if(document.getElementById("signup-btn").checked == false)
+            //     document.getElementById("signup-btn").dsiabled = true;
+            // else 
+            //     document.getElementById("signup-btn").disabled = false;
+            var checker = document.getElementById("chk-box");
+            var sendbtn = document.getElementById("signup-btn");
+            checker.onchange = function() {
+                sendbtn.disabled = !this.checked;
+            };
+            function validatornew() {
+                var str1 = document.getElementById("Password1");
+                var str2 = document.getElementById("Password2");
+                var flag = -1;
+                var a = str1.value;
+                var b = str2.value;
+
+                if (a===b)
+                    flag = 0;
+                else
+                    flag = 1;
+
+                if (flag === 1)
+                    displaymsg(1);
+                if (str2 != "" && flag === 0)
+                    displaymsg(0);
+                    // alert("The two passwords don't match. Please check and Try again.\n\nThank You.\nTeam Stockify");
+                // else if(flag === 10) {
+                //     alert("Password has been changed. Click 'Ok' to return back to the Login Page.");
+                // }
+            }
+
+            function displaymsg(a) {
+            if (a===1) {
+                document.getElementById("msgout").innerHTML = "The Entered passwords do not match. Please Retry.";
+                document.getElementById("msgout").style.color = "red";
+            }
+                else {
+                    document.getElementById("msgout").innerHTML = "Your account has been created. Login to Continue.";
+                    document.getElementById("msgout").style.color = "green";
+                    var x = document.getElementById();
+                    var y = document.getElementById();
+
+                }
+            }
+        </script>
+    </body>
+</html>

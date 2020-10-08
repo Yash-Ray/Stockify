@@ -4,7 +4,7 @@ html {
 }
 body{
     /* background-image: url('https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg'); */
-    background-image: url('https://image.freepik.com/free-vector/abstract-wallpaper-with-halftone_23-2148585152.jpg');
+    background-image: url('bg3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -103,7 +103,7 @@ input[type=email]:focus, input[type=password]:focus {
 button:focus {
     border: 1px solid black !important;
     box-shadow: none !important;
-    outline-color: none !important;
+    outline-color: transparent !important;
 }
 
 #forgot-password, #sign-up-here {
