@@ -3,6 +3,12 @@ html {
     margin: 0px;
     scroll-behavior: smooth;
 }
+body {
+    background-image: url('https://image.freepik.com/free-vector/abstract-wallpaper-with-halftone_23-2148585152.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
 section {
     height: 95vh;
 }
