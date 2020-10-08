@@ -7,3 +7,5 @@ DBMS Project
 [Blog 2](https://towardsdatascience.com/getting-rich-quick-with-machine-learning-and-stock-market-predictions-696802da94fe)
 
 [OTP Provider website](https://www.miniorange.com/otp-verification-serivce#validateotpjs)
+
+## Bugs Present in Sign-Up.html. Will rectify ASAP
