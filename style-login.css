@@ -4,7 +4,7 @@ html {
 }
 body{
     /* background-image: url('https://raw.githubusercontent.com/ahsanazim/slack-landing-page/master/screen_caps/main_background.jpg'); */
-    background-image: url('https://image.freepik.com/free-vector/abstract-wallpaper-with-halftone_23-2148585152.jpg');
+    background-image: url('bg3.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -129,7 +129,7 @@ button:focus {
     position: relative;
     /* top: 50%; */
     transform: translate(0%,50%);
-    box-shadow: 7px 5px 5px rgba(255, 255, 255, 0.384);
+    box-shadow: 5px 5px 10px grey;
     /* box-shadow: -10px -10px 10px red; */
 }
 .sign-up-link {
