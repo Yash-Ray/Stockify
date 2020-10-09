@@ -22,12 +22,12 @@
                         <h6 style="font-size: 20px;">Please fill in the form below to create an account.</h6>
                         <div class="form-row">
                             <div class="col">
-                                <label for="formGroupExampleInput">Name</label>
-                                <input type="text" id="formGroupExampleInput" class="form-control" placeholder="First name" required>
+                                <label for="formGroupExampleInput1">Name</label>
+                                <input type="text" id="formGroupExampleInput1" class="form-control" placeholder="First name" required>
                             </div>
                             <div class="col">
-                                <label for="formGroupExampleInput" style="color: transparent;">.</label>
-                                <input type="text" id="formGroupExampleInput" class="form-control" placeholder="Last name">
+                                <label for="formGroupExampleInput2" style="color: transparent;">.</label>
+                                <input type="text" id="formGroupExampleInput2" class="form-control" placeholder="Last name">
                             </div>
                         </div>
                         <div class="form-group">
@@ -49,7 +49,7 @@
                         </div>
                         <div class="buttons">
                         <!-- <div class="cancel-btn"> -->
-                            <input type="button" class="btn cancel-btnbtn-primary btn08 projectButton" value="Reset" onclick="refresh" style="margin: 5px; box-shadow: none;">
+                            <input type="submit" onclick="window.location.reload();" class="btn cancel-btnbtn-primary btn08 projectButton" value="Reset" style="margin: 5px; box-shadow: none;">
                             <!-- <button type="reset" class="btn btn-primary btn08 projectButton">Cancel</button> -->
                         <!-- </div> -->
                         <!-- <div class="signin-btn"> -->
@@ -74,10 +74,6 @@
             <div class="footer-text" id="ftr-text">Designed with ❤️ by <span>Team Stockify</span></div>
         </footer>
         <script>
-            // if(document.getElementById("signup-btn").checked == false)
-            //     document.getElementById("signup-btn").dsiabled = true;
-            // else 
-            //     document.getElementById("signup-btn").disabled = false;
             var checker = document.getElementById("chk-box");
             var sendbtn = document.getElementById("signup-btn");
             checker.onchange = function() {
@@ -86,18 +82,23 @@
             function validatornew() {
                 var str1 = document.getElementById("Password1");
                 var str2 = document.getElementById("Password2");
+                var Fname = document.getElementById("formGroupExampleInput1");
+                var Lname = document.getElementById("formGroupExampleInput2");
+                var email = document.getElementById("emaillabel");
                 var flag = -1;
                 var a = str1.value;
                 var b = str2.value;
 
+                if (Fname.value && email.value && a && b) {
                 if (a===b)
                     flag = 0;
                 else
                     flag = 1;
+                }
 
                 if (flag === 1)
                     displaymsg(1);
-                if (str2 != "" && flag === 0)
+                if (flag === 0)
                     displaymsg(0);
                     // alert("The two passwords don't match. Please check and Try again.\n\nThank You.\nTeam Stockify");
                 // else if(flag === 10) {
@@ -106,16 +107,14 @@
             }
 
             function displaymsg(a) {
-            if (a===1) {
-                document.getElementById("msgout").innerHTML = "The Entered passwords do not match. Please Retry.";
-                document.getElementById("msgout").style.color = "red";
-            }
-                else {
+                if (a===1) {
+                    document.getElementById("msgout").innerHTML = "The Entered passwords do not match. Please Retry.";
+                    document.getElementById("msgout").style.color = "red";
+                }
+                if (a===0) {
+                    // alert("Hi there");
                     document.getElementById("msgout").innerHTML = "Your account has been created. Login to Continue.";
                     document.getElementById("msgout").style.color = "green";
-                    var x = document.getElementById();
-                    var y = document.getElementById();
-
                 }
             }
         </script>
