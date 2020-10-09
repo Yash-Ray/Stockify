@@ -95,11 +95,16 @@
                 else
                     flag = 1;
                 }
+                if(a.length === 0 || b.length == 0 || (Fname.value).length == 0 || (Lname.value).length == 0 || (email.value).length == 0) {
+                    flag = 2;
+                }
 
                 if (flag === 1)
                     displaymsg(1);
                 if (flag === 0)
                     displaymsg(0);
+                if (flag === 2)
+                    displaymsg(2);
                     // alert("The two passwords don't match. Please check and Try again.\n\nThank You.\nTeam Stockify");
                 // else if(flag === 10) {
                 //     alert("Password has been changed. Click 'Ok' to return back to the Login Page.");
@@ -115,6 +120,10 @@
                     // alert("Hi there");
                     document.getElementById("msgout").innerHTML = "Your account has been created. Login to Continue.";
                     document.getElementById("msgout").style.color = "green";
+                }
+                else {
+                    document.getElementById("msgout").innerHTML = "Please fill in all the fields to continue.";
+                    document.getElementById("msgout").style.color = "blue";
                 }
             }
         </script>
