@@ -2,12 +2,7 @@ html {
     padding: 0px;
     margin: 0px;
     scroll-behavior: smooth;
-}
-body {
-    background-image: url('https://image.freepik.com/free-vector/abstract-wallpaper-with-halftone_23-2148585152.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    transition: all 0.9s ease;
 }
 section {
     height: 95vh;
@@ -125,4 +120,8 @@ footer {
     .buttons {
         display: block;
     }
+}
+
+#chk-box:focus {
+    outline: none !important;
 }
