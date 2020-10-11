@@ -5,42 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon1.png" type="image/png">
+    <link rel="icon" href="images/favicon1.png" type="image/png">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="bootstrapstyle.css">
-    <link rel="stylesheet" href="sign-up-style.css">
+    <link rel="stylesheet" href="css/bootstrapstyle.css">
+    <link rel="stylesheet" href="css/sign-up-style.css">
 </head>
 
     <body>
         <section>
             <div class="container">
                 <div class="innerbox" style="margin: 0px auto;">
-                    <form>
+                    <form action="/sign_up" method="POST">
                         <h4 style="font-size: 50px; font-family: 'Comfortaa', cursive; color: red; -webkit-text-stroke: 1px black;">Sign Up</h4>
                         <h6 style="font-size: 20px; font-family: 'Comfortaa', cursive; color: red; -webkit-text-stroke: 0.5px black;">Please fill in the form below to create an account.</h6>
                         <div class="form-row">
                             <div class="col">
                                 <label for="formGroupExampleInput1">Name</label>
-                                <input type="text" id="formGroupExampleInput1" class="form-control" placeholder="First name" required>
+                                <input type="text" id="formGroupExampleInput1" name="f_name" class="form-control" placeholder="First name" required>
                             </div>
                             <div class="col">
                                 <label for="formGroupExampleInput2" style="color: transparent;">.</label>
-                                <input type="text" id="formGroupExampleInput2" class="form-control" placeholder="Last name">
+                                <input type="text" id="formGroupExampleInput2" name="l_name" class="form-control" placeholder="Last name">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="emaillabel" style="padding-top: 10px;">Email</label>
-                            <input type="email" class="form-control" aria-describedby="emailHelp" id="emaillabel" required>
+                            <input type="email" class="form-control" name="email_up" aria-describedby="emailHelp" id="emaillabel" required>
                         </div>
                         <div class="form-group">
                             <label for="emaillabel" style="margin-top: 0px;">Password</label>
-                            <input type="password" class="form-control" id="Password1" required>
+                            <input type="password" class="form-control" name="pass_up"id="Password1" required>
                         </div>
                         <div class="form-group">
                             <label for="emaillabel" style="margin-top: 0px;">Confirm Password</label>
-                            <input type="password" class="form-control" id="Password2" required>
+                            <input type="password" class="form-control" name="cnpass_up" id="Password2" required>
                             <small class="msgout-class" id="msgout"></small>
                         </div>
                         <div class="T&C-agree">
@@ -57,7 +57,7 @@
                             <!-- <button type="submit" class="btn btn-primary btn08 projectButton">SignUp</button> -->
                         <!-- </div> -->
                         </div>
-                        <div class="back-to-login" style="text-align: center; margin-top: 5px;">Already have an account? <a href="./Login.html">Login</a> here.</div>
+                        <div class="back-to-login" style="text-align: center; margin-top: 5px;">Already have an account? <a href="login">Login</a> here.</div>
                     </form>
                 </div>
             </div>
