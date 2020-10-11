@@ -160,3 +160,16 @@ footer {
     margin: auto;
     padding-top: 5px;
 }
+
+@media only screen and (max-width:1000px) {
+    .ray1 {
+        display: none;
+    }
+    .row {
+        box-shadow: none;
+    }
+    .ray-form {
+        height: 420px;
+        box-shadow: 5px 5px 10px grey;
+    }
+}
