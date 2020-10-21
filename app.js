@@ -97,7 +97,22 @@ app.post("/forgot",function(req,res){
     if (new_pass !== re_new_pass){
         res.redirect("/forgot");
     }else{
-        res.sendFile(__dirname + "/HomePage.html");
+        User.findOne({email:email2},function(err,foundmail){
+            if(err){
+                console.log(err);
+            }else{
+                User.findOneAndUpdate({email:email2},{$set:{password:new_pass}},{new:false},function(err,doc){
+                    if(err){
+                        console.log(err);
+                    }else{
+                        console.log("password updated");
+                       
+                    }
+                })
+                
+            }
+        })
+        
     }   
 });
 
