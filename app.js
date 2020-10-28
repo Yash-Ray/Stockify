@@ -7,6 +7,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+app.set('view engine', 'ejs');
+
 mongoose.connect("mongodb://localhost:27017/UserDB" , {useNewUrlParser:true , useUnifiedTopology:true});
 
 const UserSchema = {
@@ -17,7 +19,21 @@ const UserSchema = {
     
 };
 
+const investSchema = {
+    Company_name:String,
+    DOI:Date,
+    TI:Number,
+    Time:String,
+    Volume:Number,
+    Buy_price:Number,
+    TOI:Number,
+
+    
+};
+
 const User =  mongoose.model("User",UserSchema);
+const Invest = mongoose.model("Invest",investSchema);
+
 
 app.get("/login",function(req,res){
     res.sendFile(__dirname + "/login.html");
@@ -31,6 +47,10 @@ app.get("/forgot",function(req,res){
 
 app.get("/sign_up",function(req,res){
     res.sendFile(__dirname + "/Sign-Up.html")
+});
+app.get("/invest" , function(req,res){
+    res.render("invest");
+    
 });
 
 app.post("/sign_up",function(req,res){
@@ -77,7 +97,7 @@ app.post("/login",function(req,res){
         }else{
             if(foundUser){
                 if(foundUser.password === pass){
-                    res.sendFile(__dirname + "/Homepage.html")
+                    res.render("HomePage",{empty:foundUser.firstName + " " + foundUser.lastName});
                 }else{
                     res.redirect("/login");
                 }
@@ -86,6 +106,7 @@ app.post("/login",function(req,res){
     })
 
 });
+
 
 app.post("/forgot",function(req,res){
 
@@ -116,6 +137,28 @@ app.post("/forgot",function(req,res){
     }   
 });
 
+app.post("/invest",function(req,res){
+
+    // const newInvest = new Invest({
+
+    //     Company_name : req.body.Company_name,
+    //     DOI : req.body.DOI,
+    //     TI :req.body.Ti,
+    //     Time : req.body.Time,
+    //     Volume : req.body.vol,
+    //     Buy_price : req.body.Buy_price,
+    //     TOI  : req.body.To_Invest,
+
+
+    // });
+
+    // console.log(req.body.Company_name);
+    // newInvest.save();
+
+     console.log("hjk");
+
+
+})
 app.listen(3000,function(){
     console.log("Server is running on port 3000");
 });
