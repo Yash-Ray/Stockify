@@ -7,4 +7,4 @@ DBMS Project
 [Blog 2](https://towardsdatascience.com/getting-rich-quick-with-machine-learning-and-stock-market-predictions-696802da94fe)
 
 <p>
-  <code>Hemant, Correct the FAVICON href, either change it from <strong>images/favicon1.png</strong> to <strong>favicon1.png</strong> or <strong>create</strong> a folder and store the <strong>images</strong> inside it.</code>
+  <code>Hemant, Correct the FAVICON href, change it from <strong>images/......</strong> to <strong>public/images/.....</strong>.
