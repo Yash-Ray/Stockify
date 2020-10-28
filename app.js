@@ -22,18 +22,24 @@ const UserSchema = {
 const investSchema = {
     Company_name:String,
     DOI:Date,
-    TI:Number,
+    TI:String,
     Time:String,
     Volume:Number,
     Buy_price:Number,
     TOI:Number,
-
-    
 };
 
 const User =  mongoose.model("User",UserSchema);
 const Invest = mongoose.model("Invest",investSchema);
-
+const tableData=[{
+        Company_name:"Apple",
+        DOI : "12/12/12",
+        TI :"12IK098",
+        Time : "13:338:09",
+        Volume :13232,
+        Buy_price :13200,
+        TOI:1302300,
+    }];
 
 app.get("/login",function(req,res){
     res.sendFile(__dirname + "/login.html");
@@ -49,9 +55,31 @@ app.get("/sign_up",function(req,res){
     res.sendFile(__dirname + "/Sign-Up.html")
 });
 app.get("/invest" , function(req,res){
-    res.render("invest");
+    
+    
+    Invest.find({},function(err,data){
+        
+        if(data.length === 0){
+            Invest.insertMany(tableData,function(err){
+                if(err){
+                    console.log(err);
+                }else{
+                    console.log("Successfully saved");
+                }
+            });
+
+            res.redirect("/invest");
+        
+        }else{
+            res.render("invest",{InvestData:data});
+        }
+            
+    });
+    
     
 });
+
+
 
 app.post("/sign_up",function(req,res){
 
@@ -104,7 +132,7 @@ app.post("/login",function(req,res){
             }
         }
     })
-
+       
 });
 
 
@@ -139,28 +167,22 @@ app.post("/forgot",function(req,res){
 
 app.post("/invest",function(req,res){
 
-    // const newInvest = new Invest({
+    const newInvest = new Invest({
 
-    //     Company_name : req.body.Company_name,
-    //     DOI : req.body.DOI,
-    //     TI :req.body.Ti,
-    //     Time : req.body.Time,
-    //     Volume : req.body.vol,
-    //     Buy_price : req.body.Buy_price,
-    //     TOI  : req.body.To_Invest,
-
-
-    // });
-
-    // console.log(req.body.Company_name);
-    // newInvest.save();
-
-     console.log("hjk");
-
-
+        Company_name : req.body.Company_Name,
+        DOI : req.body.DOI,
+        TI :req.body.ti,
+        Time : req.body.time,
+        Volume : req.body.vol,
+        Buy_price : req.body.buy_price,
+        TOI  : req.body.toi,
+    });
+   
+    newInvest.save();
+    res.redirect("/invest");
+    
 })
+
 app.listen(3000,function(){
     console.log("Server is running on port 3000");
 });
-
-
