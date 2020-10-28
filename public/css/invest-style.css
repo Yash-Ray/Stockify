@@ -157,3 +157,13 @@ input[type=email]:focus, input[type=password]:focus , input[type=text]:focus, in
 ::placeholder {
     color: rgba(0, 0, 0, 0.692);
 }
+
+.back a{
+    font-size: xx-large;
+    position: absolute;
+    left: 2vw;
+    top: 2vw;
+    color: red;
+    text-shadow: 4px -2px 2px yellow;
+
+}
