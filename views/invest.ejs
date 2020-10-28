@@ -3,82 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invest</title>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/favicon1.png" type="image/png">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/bootstrapstyle.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/invest-style.css">
+    <title>Document</title>
 </head>
 <body>
-<div class="back"><a href="./user-login.html"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
-    <div class="container form-screen">
-        <div class="innerbox">
+    <div class="form-wrapper">
+        <div class="form-container">
             <form action="/invest" method="POST">
-                <div class="form-group">
-                    <label for="Company_Name">Company Name</label>
-                    <input type="text" class="form-control" aria-describedby="Company_Name" name="Company_name" id="Company_Name">
-                </div>
-                <!-- <div class="form-group">
-                    <label for="doi">Date of Investment</label>
-                    <input type="date" class="form-control" aria-describedby="doi" name="DOI" id="doi">
-                </div>
-                <div class="form-group">
-                    <label for="trans_id">Transaction ID</label>
-                    <input type="text" class="form-control" aria-describedby="trans_id" name="Ti" id="trans_id">
-                </div>
-                <div class="form-group">
-                    <label for="time">Time</label>
-                    <input type="time" class="form-control" aria-describedby="time" name="Time" id="time">
-                </div>
-                <div class="form-group">
-                    <label for="vol">Volume</label>
-                    <input type="text" class="form-control" aria-describedby="vol" name="vol" id="vol">
-                </div>
-                <div class="form-group">
-                    <label for="buy_price">Buy Price</label>
-                    <input type="text" class="form-control" aria-describedby="buy_price" name="Buy_price" id="buy_price">
-                </div>
-                <div class="form-group">
-                    <label for="tot_inv">Total Investment</label>
-                    <input type="text" class="form-control" aria-describedby="tot_inv" name="To_Invest" id="tot_inv">
-                </div> -->
-                <div class="form-group">
-                    <button type="button" onclick="window.location.reload();" class="btn cancel-btnbtn-primary btn08 projectButton" value="Add" style="margin: 5px; box-shadow: none;">Add</button>
-                </div>
+                <label for=" Company_Name">Company Name</label><br>
+                <input type="text" name="Company_Name" id="Company_Name"><br>
+                <label for="doi">Date of Investment</label><br>
+                <input type="date" name="DOI" id="doi"><br>
+                <label for="trans_id ">Transaction ID</label><br>
+                <input type="text" name="ti" id="trans_id"><br>
+                <label for="time">Time</label><br>
+                <input type="time" name="time" id="time"><br>
+                <label for="vol">Volume</label><br>
+                <input type="text" name="vol" id="vol"><br>
+                <label for="buy_price">Buy Price</label><br>
+                <input type="text" name="buy_price" id="buy_price"><br>
+                <label for="total_inv">Total Investment</label><br>
+                <input type="text" name="toi" id="total_inv"><br>
+                <button type="submit">Add</button><br>
             </form>
         </div>
+        
     </div>
-    <section>
-        <div class="contianer">
-            <table>
-                <tr>
-                    <th>Company Name</th>
-                    <th>Date of Investment</th>
-                    <th>Transaction ID</th>
-                    <th>Time</th>
-                    <th>Volume</th>
-                    <th>Buy Price</th>
-                    <th>Total Investment</th>
-                </tr>
-
-                <tr>
-                    <td>20</td>
-                    <td>12</td>
-                    <td>12</td>
-                    <td>12234567890</td>
-                    <td>12</td>
-                    <td>12</td>
-                    <td>12</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <footer>
-        <div class="footer-text" id="ftr-text">Designed with ❤️ by <span>Team Stockify</span></div>
-    </footer>
+    <div class="Info">
+        <table>
+            <tr>
+                <th>Company Name</th>
+                <th>Date of Investment</th>
+                <th>Transaction ID</th>
+                <th>Time</th>
+                <th>Volume</th>
+                <th>Buy Price</th>
+                <th>Total Investment</th>
+            </tr>
+           
+                <%InvestData.forEach(function(item){%>
+                    <tr>
+                        <td><%=item.Company_name%></td>
+                        <td><%=item.DOI%></td>
+                        <td><%=item.TI%></td>
+                        <td><%=item.Time%></td>
+                        <td><%=item.Volume%></td>
+                        <td><%=item.Buy_price%></td>
+                        <td><%=item.TOI%></td>
+                    </tr>
+                <%})%>
+           
+            
+        </table>
+        
+    </div>
 </body>
 </html>
