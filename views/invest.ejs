@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/invest-style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
     <title>Document</title>
 </head>
 <body>
+    <div class="back"><a  type="submit" href="HomePage"><i class="fa fa-chevron-left" aria-hidden="true"></i></a></div>
     <div class="form-wrapper">
         <div class="form-container">
             <form action="/invest" method="POST">
+                <label for=" User_Name">User Email</label><br>
+                <input type="text" name="User_email" id="User_Name"><br>
                 <label for=" Company_Name">Company Name</label><br>
                 <input type="text" name="Company_Name" id="Company_Name"><br>
                 <label for="doi">Date of Investment</label><br>
@@ -22,9 +28,8 @@
                 <input type="text" name="vol" id="vol"><br>
                 <label for="buy_price">Buy Price</label><br>
                 <input type="text" name="buy_price" id="buy_price"><br>
-                <label for="total_inv">Total Investment</label><br>
-                <input type="text" name="toi" id="total_inv"><br>
-                <button type="submit">Add</button><br>
+                <button type="submit">ADD</button><br>
+                
             </form>
         </div>
         
@@ -32,6 +37,7 @@
     <div class="Info">
         <table>
             <tr>
+                <th>User Email</th>
                 <th>Company Name</th>
                 <th>Date of Investment</th>
                 <th>Transaction ID</th>
@@ -43,6 +49,7 @@
            
                 <%InvestData.forEach(function(item){%>
                     <tr>
+                        <td><%=item.User_email%></td>
                         <td><%=item.Company_name%></td>
                         <td><%=item.DOI%></td>
                         <td><%=item.TI%></td>
@@ -50,6 +57,7 @@
                         <td><%=item.Volume%></td>
                         <td><%=item.Buy_price%></td>
                         <td><%=item.TOI%></td>
+                        
                     </tr>
                 <%})%>
            

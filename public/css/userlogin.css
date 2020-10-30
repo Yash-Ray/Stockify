@@ -39,6 +39,8 @@ nav {
 tr, td, th, table{
     border-collapse: collapse;
     border: 2px solid black;
+    height: 40px;
+    font-size: 30px;
 }
 table {
     margin-top: 0vw;
@@ -49,8 +51,10 @@ footer {
     background-color: #1A1B25;
     text-align: center;
     position: fixed;
+    left: 0px;
     bottom: 0px;
     width: 100%;
+
 
 }
 .table-view {
@@ -72,6 +76,40 @@ h3 {
     left: 50%;
     top: 15%;
     transform: translate(-50%,-50%);
+}
+
+.outer{
+    position: relative;
+    top: 100px;
+    
+   
+
+}
+.inner_1{
+    position: absolute;
+    left: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.inner_2{
+    position: absolute;
+    top: 500px;
+    left: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.inner_3{
+    position: absolute;
+    top: 1000px;
+    left: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.inner_4{
+    position: absolute;
+    top: 1500px;
+    left: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 @media (max-width:768px) {
     .table1 {
