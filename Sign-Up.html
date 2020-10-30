@@ -24,10 +24,12 @@
                             <div class="col">
                                 <label for="formGroupExampleInput1">Name</label>
                                 <input type="text" id="formGroupExampleInput1" name="f_name" class="form-control" placeholder="First name" required>
+                                <small class="msgout-class" id="msgfname"></small>
                             </div>
                             <div class="col">
                                 <label for="formGroupExampleInput2" style="color: transparent;">.</label>
                                 <input type="text" id="formGroupExampleInput2" name="l_name" class="form-control" placeholder="Last name">
+                                <small class="msgout-class" id="msglname"></small>
                             </div>
                         </div>
                         <div class="form-group">
@@ -53,7 +55,7 @@
                             <!-- <button type="reset" class="btn btn-primary btn08 projectButton">Cancel</button> -->
                         <!-- </div> -->
                         <!-- <div class="signin-btn"> -->
-                            <button type="submit" id="signup-btn" class="btn signin-btnbtn-primary btn08 projectButton" onclick="validatornew()"    style="margin: 5px; box-shadow: none;" disabled>SignUp</button>
+                            <button type="button" id="signup-btn" class="btn signin-btnbtn-primary btn08 projectButton" onclick="validatornew()"    style="margin: 5px; box-shadow: none;" disabled>SignUp</button>
                             <!-- <button type="submit" class="btn btn-primary btn08 projectButton">SignUp</button> -->
                         <!-- </div> -->
                         </div>
@@ -88,27 +90,42 @@
                 var flag = -1;
                 var a = str1.value;
                 var b = str2.value;
-
-                if (Fname.value && email.value && a && b) {
-                if (a===b)
-                    flag = 0;
-                else
-                    flag = 1;
+                var chk1 = /^[A-Za-z]+$/;
+                var f2 = 1;
+                if(Fname.value.match(chk1) === false) {
+                    f2 = 1;
+                    namechkmsg(f2);
                 }
-                if(a.length === 0 || b.length == 0 || (Fname.value).length == 0 || (Lname.value).length == 0 || (email.value).length == 0) {
-                    flag = 2;
-                }
+                else {
 
-                if (flag === 1)
-                    displaymsg(1);
-                if (flag === 0)
-                    displaymsg(0);
-                if (flag === 2)
-                    displaymsg(2);
-                    // alert("The two passwords don't match. Please check and Try again.\n\nThank You.\nTeam Stockify");
-                // else if(flag === 10) {
-                //     alert("Password has been changed. Click 'Ok' to return back to the Login Page.");
-                // }
+                    if (Fname.value && email.value && a && b) {
+                    if (a===b)
+                        flag = 0;
+                    else
+                        flag = 1;
+                    }
+                    if(a.length === 0 || b.length == 0 || (Fname.value).length == 0 || (Lname.value).length == 0 || (email.value).length == 0) {
+                        flag = 2;
+                    }
+
+                    if (flag === 1)
+                        displaymsg(1);
+                    if (flag === 0)
+                        displaymsg(0);
+                    if (flag === 2)
+                        displaymsg(2);
+                        // alert("The two passwords don't match. Please check and Try again.\n\nThank You.\nTeam Stockify");
+                    // else if(flag === 10) {
+                    //     alert("Password has been changed. Click 'Ok' to return back to the Login Page.");
+                    // }
+                }
+            }
+            function namechkmsg(n) {
+                if(n===1) {
+                    console.log("true");
+                    document.getElementById("msglname").innerHTML = "Invalid name.";
+                    document.getElementById("msglname").style.color = "red";
+                }
             }
 
             function displaymsg(a) {
