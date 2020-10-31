@@ -11,6 +11,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/bootstrapstyle.css">
     <link rel="stylesheet" href="css/userlogin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="container-fluid nav-ray">
@@ -23,7 +24,7 @@
             <div class="collapse navbar-collapse menus" id="navbarSupportedContent">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="http://127.0.0.1:8050/" style="color: yellow; text-shadow: 2px -2px 2px grey;">Analysis<span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#" style="color: yellow; text-shadow: 2px -2px 2px grey;">Predict<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
                   <a type="submit" class="nav-link" href="invest" style="color: yellow; text-shadow: 2px -2px 2px grey;">Invest<span class="sr-only">(current)</span></a>
@@ -43,164 +44,249 @@
         </nav>
     </div>
     <section style="background-color: none;">
-      <h3>SAMPLE TABLES</h3>
-        <div class="table-view container">
-            <div class="row">
-                <div class="col-sm"><table class="table table-hover table-bordered table1" style="background-color: oldlace; border: 2px solid black;">
-                    <thead>
-                      <tr style="border-bottom: 2px solid black;">
-                        <th scope="col">Country Name</th>
-                        <th scope="col">GDP</th>
-                        <th scope="col">Inflation Rate</th>
-                        <th scope="col">Per Capita</th>
-                        <th scope="col">GDP Growth Rate</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">USA</th>
-                        <td>19.6T</td>
-                        <td>0.6</td>
-                        <td>34862</td>
-                        <td>2.27</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">CHINA</th>
-                        <td>13T</td>
-                        <td>2.5</td>
-                        <td>9856</td>
-                        <td>2.27</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">JAPAN</th>
-                        <td>4.8T</td>
-                        <td>0.1</td>
-                        <td>44582</td>
-                        <td>1.71</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">GERMANY</th>
-                        <td>3.6T</td>
-                        <td>-0.1</td>
-                        <td>38952</td>
-                        <td>2.22</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">INDIA</th>
-                        <td>2.7T</td>
-                        <td>6.09</td>
-                        <td>1980</td>
-                        <td>6.68</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">UK</th>
-                        <td>2.6T</td>
-                        <td>0.6</td>
-                        <td>35623</td>
-                        <td>1.79</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">FRANCE</th>
-                        <td>2.5T</td>
-                        <td>0.8</td>
-                        <td>37985</td>
-                        <td>1.82</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">ITALY</th>
-                        <td>1.9T</td>
-                        <td>-.0.3</td>
-                        <td>38966</td>
-                        <td>1.5</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">BRAZIL</th>
-                        <td>2.05T</td>
-                        <td>2.13</td>
-                        <td>10731</td>
-                        <td>0.98</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">RUSSIA</th>
-                        <td>1.6T</td>
-                        <td>3.2</td>
-                        <td>24565</td>
-                        <td>1.55</td>
-                      </tr>
-                    </tbody>
+      <h3>STATUS</h3>
+              <div class="outer">
+                <div class="inner_1">
+                  <table class="t1">
+                    <tr >
+                      <th>COUNTRY</th>
+                      <th>EXPORT VALUE </th>
+                      <th>SHARRE GLOBALLY IN PER.</th>
+                      <th>TOP PERFORMER</th>
+                      <th>MARKET VALUE IN CR.</th>
+                    </tr>
+
+                    
                   </table>
                 </div>
-                <div class="col-sm"><table class="table table-hover table-bordered table2" style="background-color: oldlace; border: 2px solid black; padding-bottom: 20px;">
-                  <thead>
-                    <tr style="border-bottom: 2px solid black;">
-                      <th scope="col">Country Name</th>
-                      <th scope="col">Market Value</th>
-                      <th scope="col">% Globalization</th>
+              
+                
+                <div class="inner_2">
+                  <table class="t2">
+                    <tr >
+                      <th>COUNTRY</th>
+                      <th>GDP </th>
+                      <th>INFLATION RATE</th>
+                      <th>PER CAPITA INCOME</th>
+                      <th>GDP GROWTH RATE</th>
                     </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">USA</th>
-                      <td>2010B</td>
-                      <td>28.4</td>
+                    
+                  </table>
+                </div>  
+                
+                <div class="inner_3">
+                  <table class="t3">
+                    <tr >
+                      <th>COMPANY</th>
+                      <th>BUYING PRICE </th>
+                      <th>VOLUME</th>
+                      
                     </tr>
-                    <tr>
-                      <th scope="row">CHINA</th>
-                      <td>1867B</td>
-                      <td>16.6</td>
+                    
+                  </table>
+                </div>   
+
+
+                <div class="inner_4">
+                  <table class="t4">
+                    <tr >
+                      <th>Company</th>
+                      <th>ORIGIN </th>
+                      <th>STOCK VALUE</th>
+                      <th>GROWTH PERCENT</th>
+                      
                     </tr>
-                    <tr>
-                      <th scope="row">JAPAN</th>
-                      <td>1063B</td>
-                      <td>7.2</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">GERMANY</th>
-                      <td>700B</td>
-                      <td>5.8</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">INDIA</th>
-                      <td>298B</td>
-                      <td>3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">UK</th>
-                      <td>244B</td>
-                      <td>1.8</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">FRANCE</th>
-                      <td>264B</td>
-                      <td>1.9</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">ITALY</th>
-                      <td>276B</td>
-                      <td>2.3</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">BRAZIL</th>
-                      <td>146B</td>
-                      <td>1</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">RUSSIA</th>
-                      <td>139B</td>
-                      <td>0.7</td>
-                    </tr>
-                  </tbody>
-                  </table></div>
-            </div>
-        </div>
-    </section>
-    <style>
-        .table {
-            width: 100%;
-        }
-    </style>
+                    
+                  </table>
+                </div>   
+              </div>  
+
+
+                  
+                  
+                  <style>
+                    .table {
+                    width: 100%;
+                    }
+                    </style>       
     <footer>
       <div class="footer-text" id="ftr-text">Designed with ❤️ by <span>Team Stockify</span></div>
   </footer>
+  <script src="../js/data.js"> </script>
 </body>
 </html>
+
+
+
+<!-- <thead>
+  <tr style="border-bottom: 2px solid black;">
+    <th scope="col">Country Name</th>
+    <th scope="col">GDP</th>
+    <th scope="col">Inflation Rate</th>
+    <th scope="col">Per Capita</th>
+    <th scope="col">GDP Growth Rate</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">USA</th>
+    <td>19.6T</td>
+    <td>0.6</td>
+    <td>34862</td>
+    <td>2.27</td>
+  </tr>
+  <tr>
+    <th scope="row">CHINA</th>
+    <td>13T</td>
+    <td>2.5</td>
+    <td>9856</td>
+    <td>2.27</td>
+  </tr>
+  <tr>
+    <th scope="row">JAPAN</th>
+    <td>4.8T</td>
+    <td>0.1</td>
+    <td>44582</td>
+    <td>1.71</td>
+  </tr>
+  <tr>
+    <th scope="row">GERMANY</th>
+    <td>3.6T</td>
+    <td>-0.1</td>
+    <td>38952</td>
+    <td>2.22</td>
+  </tr>
+  <tr>
+    <th scope="row">INDIA</th>
+    <td>2.7T</td>
+    <td>6.09</td>
+    <td>1980</td>
+    <td>6.68</td>
+  </tr>
+  <tr>
+    <th scope="row">UK</th>
+    <td>2.6T</td>
+    <td>0.6</td>
+    <td>35623</td>
+    <td>1.79</td>
+  </tr>
+  <tr>
+    <th scope="row">FRANCE</th>
+    <td>2.5T</td>
+    <td>0.8</td>
+    <td>37985</td>
+    <td>1.82</td>
+  </tr>
+  <tr>
+    <th scope="row">ITALY</th>
+    <td>1.9T</td>
+    <td>-.0.3</td>
+    <td>38966</td>
+    <td>1.5</td>
+  </tr>
+  <tr>
+    <th scope="row">BRAZIL</th>
+    <td>2.05T</td>
+    <td>2.13</td>
+    <td>10731</td>
+    <td>0.98</td>
+  </tr>
+  <tr>
+    <th scope="row">RUSSIA</th>
+    <td>1.6T</td>
+    <td>3.2</td>
+    <td>24565</td>
+    <td>1.55</td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div class="col-sm"><table class="table table-hover table-bordered table2" style="background-color: oldlace; border: 2px solid black; padding-bottom: 20px;">
+<thead>
+<tr style="border-bottom: 2px solid black;">
+  <th scope="col">Country Name</th>
+  <th scope="col">Market Value</th>
+  <th scope="col">% Globalization</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <th scope="row">USA</th>
+  <td>2010B</td>
+  <td>28.4</td>
+</tr>
+<tr>
+  <th scope="row">CHINA</th>
+  <td>1867B</td>
+  <td>16.6</td>
+</tr>
+<tr>
+  <th scope="row">JAPAN</th>
+  <td>1063B</td>
+  <td>7.2</td>
+</tr>
+<tr>
+  <th scope="row">GERMANY</th>
+  <td>700B</td>
+  <td>5.8</td>
+</tr>
+<tr>
+  <th scope="row">INDIA</th>
+  <td>298B</td>
+  <td>3</td>
+</tr>
+<tr>
+  <th scope="row">UK</th>
+  <td>244B</td>
+  <td>1.8</td>
+</tr>
+<tr>
+  <th scope="row">FRANCE</th>
+  <td>264B</td>
+  <td>1.9</td>
+</tr>
+<tr>
+  <th scope="row">ITALY</th>
+  <td>276B</td>
+  <td>2.3</td>
+</tr>
+<tr>
+  <th scope="row">BRAZIL</th>
+  <td>146B</td>
+  <td>1</td>
+</tr>
+<tr>
+  <th scope="row">RUSSIA</th>
+  <td>139B</td>
+  <td>0.7</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</section>
+ -->
+<!-- 
+ <div class="table-view container">
+  <div class="row">
+      <div class="col-sm"><table class="table table-hover table-bordered table1" style="background-color: oldlace; border: 2px solid black;"> -->
+ 
+
+
+<!-- <tr >
+                      <th>COUNTRY</th>
+                      <th>EXPORT VALUE </th>
+                      <th>SHARRE GLOBALLY IN PER.</th>
+                      <th>TOP PERFORMER</th>
+                      <th>MARKET VALUE IN CR.</th>
+                    </tr> -->
+
+
+
+                    <!-- <tr >
+                      <th>COUNTRY</th>
+                      <th>GDP </th>
+                      <th>INFLATION RATE</th>
+                      <th>PER CAPITA INCOME</th>
+                      <th>GDP GROWTH RATE</th>
+                    </tr> -->
