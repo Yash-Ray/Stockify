@@ -1,49 +1,5 @@
-data1=[
-    {
-        Country:"JAPAN",
-        Ex_value:"19.6B",
-        Share_glo:16.8,
-        T_perf:"Glaxo",
-        M_value_cr:"375.4",
-    },
-    {
-        Country:"GERMANY",
-        Ex_value:"8.6B",
-        Share_glo:7,
-        T_perf:"Pfizer",
-        M_value_cr:"345.9"
-    },{
-        Country:"INDIA",
-        Ex_value:"3.6B",
-        Share_glo:5.9,
-        T_perf:"Dr.Reddy",
-        M_value_cr:"2.4"
-    },{
-        Country:"FRANCE",
-        Ex_value:"7.9B",
-        Share_glo:5.3,
-        T_perf:"Sanfoi",
-        M_value_cr:"365.6"
-    },{
-        Country:"BRAZIL",
-        Ex_value:"1.6B",
-        Share_glo:1.8,
-        T_perf:"marini",
-        M_value_cr:"5.4"
-    },{
-        Country:"USA",
-        Ex_value:"9.6B",
-        Share_glo:6.8,
-        T_perf:"Bx Pharma",
-        M_value_cr:"75.9"
-    }
-    
-]
-data1.forEach(function(items){
-    $(".t1").append("<tr> <td>"+items.Country+"</td><td>"+items.Ex_value+"</td><td>"+items.Share_glo+"</td><td>"+items.T_perf+"</td><td>"+items.M_value_cr+"</td></tr>")
-})
 
-data2=[
+data1=[
     {
         Country:"CHINA",
         GDP:"13T",
@@ -81,48 +37,16 @@ data2=[
     }
 ]
 
-data2.forEach(function(items){
-    $(".t2").append("<tr> <td>"+items.Country+"</td><td>"+items.GDP+"</td><td>"+items.Inf_rate+"</td><td>"+items.Per_cap_inc+"</td><td>"+items.GDP_Gr_rate+"</td></tr>")
+data1.forEach(function(items){
+    $(".t1").append("<tr> <td>"+items.Country+"</td><td>"+items.GDP+"</td><td>"+items.Inf_rate+"</td><td>"+items.Per_cap_inc+"</td><td>"+items.GDP_Gr_rate+"</td></tr>")
 })
 
-data3 =[
-    {
-        Company:"BAJAJ",
-        Buy_price:25.05,
-        Volume:300
-    },
-    {
-        Company:"TATA",
-        Buy_price:30.05,
-        Volume:55.05
-    },
-    {
-        Company:"REL",
-        Buy_price:55.05,
-        Volume:305
-    },
-    {
-        Company:"PVK PHARMA",
-        Buy_price:26.05,
-        Volume:300
-    },
-    {
-        Company:"MDN",
-        Buy_price:10.05,
-        Volume:230
-    },
-    {
-        Company:"SANFOI",
-        Buy_price:10.05,
-        Volume:220
-    }
-]
 
-data3.forEach(function(items){
-    $(".t3").append("<tr> <td>"+items.Company+"</td><td>"+items.Buy_price+"</td><td>"+items.Volume+"</td></tr>")
-})
 
-data4 = [
+
+
+
+data2 = [
     {
         Company:"BAJAJ",
         Origin:"INDIA",
@@ -167,6 +91,150 @@ data4 = [
     }
 ]
 
+data2.forEach(function(items){
+    $(".t2").append("<tr><td>"+items.Company+"</td><td>"+items.Origin+"</td><td>"+items.Stock_Value+"</td><td>"+items.Gro_per+"</td></tr>")
+})
+
+data3 =[
+    {
+        Company:"BAJAJ",
+        Buy_price:25.05,
+        Volume:300
+    },
+    {
+        Company:"TATA",
+        Buy_price:30.05,
+        Volume:55.05
+    },
+    {
+        Company:"REL",
+        Buy_price:55.05,
+        Volume:305
+    },
+    {
+        Company:"PVK PHARMA",
+        Buy_price:26.05,
+        Volume:300
+    },
+    {
+        Company:"MDN",
+        Buy_price:10.05,
+        Volume:230
+    },
+    {
+        Company:"SANFOI",
+        Buy_price:10.05,
+        Volume:220
+    }
+]
+
+data3.forEach(function(items){
+    $(".t3").append("<tr> <td>"+items.Company+"</td><td>"+items.Buy_price+"</td><td>"+items.Volume+"</td></tr>")
+})
+
+data4=[
+    {
+        Country:"JAPAN",
+        Ex_value:"19.6B",
+        Share_glo:16.8,
+        T_perf:"Glaxo",
+        M_value_cr:"375.4",
+    },
+    {
+        Country:"GERMANY",
+        Ex_value:"8.6B",
+        Share_glo:7,
+        T_perf:"Pfizer",
+        M_value_cr:"345.9"
+    },{
+        Country:"INDIA",
+        Ex_value:"3.6B",
+        Share_glo:5.9,
+        T_perf:"Dr.Reddy",
+        M_value_cr:"2.4"
+    },{
+        Country:"FRANCE",
+        Ex_value:"7.9B",
+        Share_glo:5.3,
+        T_perf:"Sanfoi",
+        M_value_cr:"365.6"
+    },{
+        Country:"BRAZIL",
+        Ex_value:"1.6B",
+        Share_glo:1.8,
+        T_perf:"marini",
+        M_value_cr:"5.4"
+    },{
+        Country:"USA",
+        Ex_value:"9.6B",
+        Share_glo:6.8,
+        T_perf:"Bx Pharma",
+        M_value_cr:"75.9"
+    }
+    
+]
 data4.forEach(function(items){
-    $(".t4").append("<tr><td>"+items.Company+"</td><td>"+items.Origin+"</td><td>"+items.Stock_Value+"</td><td>"+items.Gro_per+"</td></tr>")
+    $(".t4").append("<tr> <td>"+items.Country+"</td><td>"+items.Ex_value+"</td><td>"+items.Share_glo+"</td><td>"+items.T_perf+"</td><td>"+items.M_value_cr+"</td></tr>")
+})
+
+data6 =[
+    {
+        Rank:1,
+        Country:"USA",
+        T_Pl:"Microsoft",
+    },{
+        Rank:2,
+        Country:"CHINA",
+        T_Pl:"Alibaba",
+    },{
+        Rank:3,
+        Country:"JAPAN",
+        T_Pl:"Toyota",
+    },{
+        Rank:4,
+        Country:"GERMANY",
+        T_Pl:"SAP",
+    },
+    {
+        Rank:5,
+        Country:"FRANCE",
+        T_Pl:"L'Oreal",
+    }
+
+]
+data6.forEach(function(items){
+    $(".t6").append("<tr> <td>"+items.Rank+"</td><td>"+items.Country+"</td><td>"+items.T_Pl+"</td></tr>")
+})
+
+data5 =[
+    {
+        Rank:1,
+        Country:"CHINA",
+        Mar_value:"2010 B",
+        Gl_per:28.4,
+    },{
+        Rank:2,
+        Country:"USA",
+        Mar_value:"1867 B",
+        Gl_per:16.6,
+    },{
+        Rank:3,
+        Country:"JAPAN",
+        Mar_value:"1063 B",
+        Gl_per:7.2,
+    },{
+        Rank:4,
+        Country:"GERMANY",
+        Mar_value:"700 B",
+        Gl_per:5.8,
+    },{
+        Rank:5,
+        Country:"INDIA",
+        Mar_value:"298 B",
+        Gl_per:3,
+    }
+
+]
+data5.forEach(function(items){
+    $(".t5").append("<tr> <td>"+items.Rank+"</td><td>"+items.Country+"</td><td>"+items.Mar_value+"</td><td>"+items.Gl_per+"</td></tr>")
 })

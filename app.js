@@ -29,7 +29,7 @@ const investSchema = {
     Buy_price:Number,
     TOI:Number,
 };
-const t1Schema = {
+const t4Schema = {
     Country:String,
     Ex_value:String,
     Share_glo:Number,
@@ -37,7 +37,7 @@ const t1Schema = {
     M_value_cr:Number,
 }
 
-const t2Schema = {
+const t1Schema = {
     Country:String,
     GDP:String,
     Inf_rate:Number,
@@ -50,20 +50,33 @@ const t3Schema = {
     Volume:Number,
 }
 
-const t4Schema = {
+const t2Schema = {
     Company:String,
     Origin:String,
     Stock_Value:String,
     Gro_per:Number,
 }
+const t5Schema = {
+    Rank:Number,
+    Country:String,
+    Mar_value:String,
+    Gl_per:Number,
+}
+
+const t6Schema = {
+    Rank:Number,
+    Country:String,
+    T_Pl:String,
+}
 
 const User =  mongoose.model("User",UserSchema);
 const Invest = mongoose.model("Invest",investSchema);
-const t1 = mongoose.model("Mft",t1Schema);
-const t2 = mongoose.model("C_data",t2Schema);
+const t4 = mongoose.model("Mft",t4Schema);
+const t1 = mongoose.model("C_data",t1Schema);
 const t3 = mongoose.model("inv",t3Schema);
-const t4 = mongoose.model("C_o",t4Schema);
-
+const t2 = mongoose.model("C_o",t2Schema);
+const t5 = mongoose.model("Ra",t5Schema);
+const t6 = mongoose.model("Ser",t6Schema);
 
 
 const tableData=[{
@@ -83,7 +96,7 @@ currentUser={
 
 
 
-const mft1 = new t1({
+const mft1 = new t4({
     Country:"JAPAN",
     Ex_value:"19.6B",
     Share_glo:16.8,
@@ -91,7 +104,7 @@ const mft1 = new t1({
     M_value_cr:"375.4",
 })
 
-const mft2 = new t1({
+const mft2 = new t4({
     Country:"GERMANY",
     Ex_value:"8.6B",
     Share_glo:7,
@@ -99,7 +112,7 @@ const mft2 = new t1({
     M_value_cr:"345.9"
 })
 
-const mft6 = new t1({
+const mft6 = new t4({
     Country:"INDIA",
     Ex_value:"3.6B",
     Share_glo:5.9,
@@ -107,21 +120,21 @@ const mft6 = new t1({
     M_value_cr:"2.4"
 })
 
-const mft3 = new t1({
+const mft3 = new t4({
     Country:"FRANCE",
     Ex_value:"7.9B",
     Share_glo:5.3,
     T_perf:"Sanfoi",
     M_value_cr:"365.6"
 })
-const mft4 = new t1({
+const mft4 = new t4({
     Country:"BRAZIL",
     Ex_value:"1.6B",
     Share_glo:1.8,
     T_perf:"marini",
     M_value_cr:"5.4"
 })
-const mft5 = new t1({
+const mft5 = new t4({
     Country:"USA",
     Ex_value:"9.6B",
     Share_glo:6.8,
@@ -130,9 +143,9 @@ const mft5 = new t1({
 })
 
 
-const default_1 = [mft1,mft2,mft3,mft4,mft5,mft6];
+const default_4 = [mft1,mft2,mft3,mft4,mft5,mft6];
 
-const C_data1 = new t2({
+const C_data1 = new t1({
     Country:"CHINA",
     GDP:"13T",
     Inf_rate:2.5,
@@ -140,7 +153,7 @@ const C_data1 = new t2({
     GDP_Gr_rate:6.9
 }) 
     
-const C_data2 = new t2({
+const C_data2 = new t1({
     Country:"JAPAN",
     GDP:"4.8T",
     Inf_rate:0.1,
@@ -148,7 +161,7 @@ const C_data2 = new t2({
     GDP_Gr_rate:1.71
 }) 
 
-const C_data3 = new t2({
+const C_data3 = new t1({
     Country:"GERMANY",
     GDP:"3.6T",
     Inf_rate:-0.1,
@@ -156,7 +169,7 @@ const C_data3 = new t2({
     GDP_Gr_rate:2.22,
 }) 
 
-const C_data4 = new t2({
+const C_data4 = new t1({
     Country:"INDIA",
     GDP:"2.7T",
     Inf_rate:6.09,
@@ -164,7 +177,7 @@ const C_data4 = new t2({
     GDP_Gr_rate:6.68
 }) 
 
-const C_data5 = new t2({
+const C_data5 = new t1({
     Country:"France",
     GDP:"2.5T",
     Inf_rate:0.8,
@@ -172,7 +185,7 @@ const C_data5 = new t2({
     GDP_Gr_rate:1.82
 }) 
 
-const default_2 = [C_data1,C_data2,C_data3,C_data4,C_data5];
+const default_1 = [C_data1,C_data2,C_data3,C_data4,C_data5];
 
 const inv_1 = new t3({
     Company:"BAJAJ",
@@ -211,50 +224,115 @@ const inv_6 = new t3({
 
 const default_3=[inv_1,inv_2,inv_3,inv_4,inv_5,inv_6]
 
-const C_o1 = new t4({
+const C_o1 = new t2({
     Company:"BAJAJ",
     Origin:"INDIA",
     Stock_Value:"8.00 l Cr",
     Gro_per:7,
 })
-const C_o2 = new t4({
+const C_o2 = new t2({
     Company:"TATA",
     Origin:"IINDIA",
     Stock_Value:"12.00 l Cr",
     Gro_per:7,
 })
-const C_o3 = new t4({
+const C_o3 = new t2({
     Company:"REL",
     Origin:"INDIA",
     Stock_Value:"7.00 l Cr",
     Gro_per:9,
 })
-const C_o4 = new t4({
+const C_o4 = new t2({
     Company:"PVK PHARMA",
     Origin:"INDIA",
     Stock_Value:"2.00 l Cr",
     Gro_per:2,
 })
-const C_o5 = new t4({
+const C_o5 = new t2({
     Company:"MDN",
     Origin:"INDIA",
     Stock_Value:"1.40 l Cr",
     Gro_per:8.5,
 })
-const C_o6 = new t4({
+const C_o6 = new t2({
     Company:"SANFOI",
     Origin:"FRANCE",
     Stock_Value:"5.4 l Cr",
     Gro_per:6,
 })
-const C_o7 = new t4({
+const C_o7 = new t2({
     Company:"MARINI",
     Origin:"BRAZIL",
     Stock_Value:"5.50 l Cr",
     Gro_per:4.4,
 })
 
-const default_4=[C_o1,C_o2,C_o3,C_o4,C_o5,C_o6,C_o7];
+const default_2=[C_o1,C_o2,C_o3,C_o4,C_o5,C_o6,C_o7];
+
+const Ra1 = new t5({
+    Rank:1,
+    Country:"CHINA",
+    Mar_value:"2010 B",
+    Gl_per:28.4,
+})
+const Ra2 = new t5({
+    Rank:2,
+    Country:"USA",
+    Mar_value:"1867 B",
+    Gl_per:16.6,
+})
+
+const Ra3 = new t5({
+    Rank:3,
+    Country:"JAPAN",
+    Mar_value:"1063 B",
+    Gl_per:7.2,
+})
+const Ra4 = new t5({
+    Rank:4,
+    Country:"GERMANY",
+    Mar_value:"700 B",
+    Gl_per:5.8,
+})
+const Ra5 = new t5({
+    Rank:5,
+    Country:"INDIA",
+    Mar_value:"298 B",
+    Gl_per:3,
+})
+
+const default_5 = [Ra1,Ra2,Ra3,Ra4,Ra5]
+
+const Ser1 = new t6({
+    Rank:1,
+    Country:"USA",
+    T_Pl:"Microsoft",
+})
+const Ser2 = new t6({
+    Rank:2,
+    Country:"CHINA",
+    T_Pl:"Alibaba",
+})
+
+const Ser3 = new t6({
+    Rank:3,
+    Country:"JAPAN",
+    T_Pl:"Toyota",
+})
+const Ser4 =new t6( {
+    Rank:4,
+    Country:"GERMANY",
+    T_Pl:"SAP",
+})
+
+const Ser5 =new t6( {
+    Rank:5,
+    Country:"FRANCE",
+    T_Pl:"L'Oreal",
+})
+
+const default_6 =[Ser1,Ser2,Ser3,Ser4,Ser5]
+console.log(default_4);
 
 app.get("/index",function(req,res){
     res.sendFile(__dirname + "/index.html")
@@ -345,10 +423,10 @@ app.post("/login",function(req,res){
                 if(foundUser.password === pass){
                    
 
-                    t1.find({},function(err,foundItems1){
+                    t4.find({},function(err,foundItems4){
 
-                        if(foundItems1.length === 0){
-                            t1.insertMany(default_1,function(err){
+                        if(foundItems4.length === 0){
+                            t4.insertMany(default_4,function(err){
                                 if(!err){
                                     console.log(" saved")
                                 }
@@ -357,10 +435,10 @@ app.post("/login",function(req,res){
                         }
                         
                     });
-                    t2.find({},function(err,foundItems2){
+                    t1.find({},function(err,foundItems1){
 
-                        if(foundItems2.length === 0){
-                            t2.insertMany(default_2,function(err){
+                        if(foundItems1.length === 0){
+                            t1.insertMany(default_1,function(err){
                                 if(!err){
                                     console.log(" saved")
                                 }
@@ -382,10 +460,38 @@ app.post("/login",function(req,res){
                         }
                         
                     });
-                    t4.find({},function(err,foundItems4){
+                    t2.find({},function(err,foundItems2){
                         
-                        if(foundItems4.length === 0){
-                            t4.insertMany(default_4,function(err){
+                        if(foundItems2.length === 0){
+                            t2.insertMany(default_2,function(err){
+                                if(!err){
+                                    console.log(" saved")
+                                    
+                                }
+                            });
+                
+                        }
+                        
+                    });
+
+                    t5.find({},function(err,foundItems5){
+                        
+                        if(foundItems5.length === 0){
+                            t5.insertMany(default_5,function(err){
+                                if(!err){
+                                    console.log(" saved")
+                                    
+                                }
+                            });
+                
+                        }
+                        
+                    });
+
+                    t6.find({},function(err,foundItems6){
+                        
+                        if(foundItems6.length === 0){
+                            t6.insertMany(default_6,function(err){
                                 if(!err){
                                     console.log(" saved")
                                     

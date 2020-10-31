@@ -40,11 +40,13 @@ table {
     margin-top: 0vw;
     text-align: center;
 }
+
 footer {
     height: 5vh;
     background-color: #1A1B25;
     text-align: center;
     position: fixed;
+    bottom: 0px;
     left: 0px;
     bottom: 0px;
     width: 100%;
@@ -110,16 +112,26 @@ h3 {
     left: 300px;
     background-color: rgba(255, 255, 255, 0.6);
 }
+
+.inner_5{
+    position: absolute;
+    top: 2000px;
+    left: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.inner_6{
+    position: absolute;
+    top: 2500px;
+    left: 300px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
 @media (max-width:768px) {
     .table1 {
         display: none;
     }
 }
- @media (max-width:336px) {
-    .table-view {
-        display: none;
-    }
- }
+ 
 @media (max-width:392px) {
     .navbar-toggler {
         position: absolute;
