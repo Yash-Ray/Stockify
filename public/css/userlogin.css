@@ -24,15 +24,9 @@ html {
 }
 li {
     font-size: 20px;
-    padding: 0px 15px;
+    padding: 0px 20px;
 }
-.table-view {
-    /* background-color: transparent; */
-    /* width: 100%; */
-    /* float:left; */
-    /* margin-left:13vw; */
-    
-}
+
 nav {
     position: absolute;
 }
@@ -40,7 +34,7 @@ tr, td, th, table{
     border-collapse: collapse;
     border: 2px solid black;
     height: 40px;
-    font-size: 30px;
+    font-size: 20px;
 }
 table {
     margin-top: 0vw;
@@ -87,7 +81,7 @@ h3 {
 }
 .inner_1{
     position: absolute;
-    left: 100px;
+    left: 300px;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
@@ -103,6 +97,11 @@ h3 {
     top: 1000px;
     left: 300px;
     background-color: rgba(255, 255, 255, 0.6);
+}.outer h1{
+    text-align: center;
+    color: black;
+   
+    
 }
 
 .inner_4{
