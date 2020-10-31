@@ -53,8 +53,11 @@ input[type=email], input[type=password] {
     outline: 0;
     margin-bottom: 20px;
     padding-left: 0px;
-    color: #ecf0f5;
+    color:black;
     background: transparent;
+}
+input{
+    color:black;
 }
 input[type=email] {
     margin-bottom: 5px;
