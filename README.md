@@ -63,6 +63,7 @@ The it will show tha packages are installed and 0 vulnerabilities.
 
 Now install nodemon by running the command npm i -g nodemon
 To run the app ,run the command nodemon app.js and press enter.
+On the browser search bar type localhost:3000/index to run app on browser.
 
 Now to check data in the database :
 
